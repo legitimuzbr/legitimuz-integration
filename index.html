@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Verificação de Identidade</title>
+
+    <style type="text/css">
+      .btn {
+        white-space: normal;
+      }
+    </style>
   </head>
   <body>
     
@@ -18,27 +21,25 @@
         <div class="col-lg-8 my-5">
           <h2>Digite seu cpf abaixo:</h2>
           <input type="number" maxlength="11" class="form-control mt-3" id="legitimuz-hydrate-cpf" placeholder="Digite seu CPF aqui...">
-          <button class="btn btn-success btn-lg btn-block mt-3" type="button" id="legitimuz-action-verify">VERIFICAR</button>
+          <button class="btn btn-success btn-lg btn-block mt-3" type="button" id="legitimuz-action-verify">VERIFICAR IDENTIDADE</button>
         </div>
       </div>
     </div>
 
-      
-
+    
 
       <div id="legitimuz-root"></div>
 
 
+      <script src="https://legitimuz-cdn.s3.amazonaws.com/js/sdk/legitimuz-sdk.js"></script>
+      <script lang="text/javascript">
+        const legitimuz = Legitimuz({
+          host: "https://api.legitimuz.com",
+          token: "9a16d42a-bdfa-4e5d-988d-d4acb42ed795",
+        });
 
-    <script src="https://legitimuz-cdn.s3.amazonaws.com/js/sdk/legitimuz-sdk.js"></script>
-    <script lang="text/javascript">
-      const legitimuz = Legitimuz({
-        host: "https://api.legitimuz.com",
-        token: "9a16d42a-bdfa-4e5d-988d-d4acb42ed795",
-      });
-
-    legitimuz.mount();
-    </script>
+      legitimuz.mount();
+      </script>
 
 
 
