@@ -37,6 +37,18 @@
       </div>
     </div>
 
+    <div id="legitimuz-root"></div>
+
+    <script src="https://legitimuz-cdn.s3.amazonaws.com/js/sdk/legitimuz-sdk.js"></script>
+    <script lang="text/javascript">
+        const legitimuz = Legitimuz({
+          host: "https://api.legitimuz.com",
+          token: "9a16d42a-bdfa-4e5d-988d-d4acb42ed795",
+        });
+
+      legitimuz.mount();
+    </script>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
